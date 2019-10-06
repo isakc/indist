@@ -1,0 +1,343 @@
+
+html,body{
+    font-family: "Noto Sans KR", sans-serif;
+    height: 100%;
+}
+input:focus {
+    outline: none;
+}
+#sectionRookie{
+    width: 1000px;
+    /*background-color: red;*/
+    position: relative;
+    margin: auto;
+    min-height: 500px;
+    overflow: hidden;
+}
+.bg{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.overflow{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cover{
+    width: 230px;
+    height: 320px;
+    position: absolute;
+    z-index: 3;
+    transition: .4s ease;
+}
+.cover:hover{
+    background-color: rgba(100,100,100,.2);
+    cursor: pointer;
+}
+#boxPopContents{
+    width: 100%;
+    min-height: 330px;
+}
+
+
+#wrapTab{
+    width: 1000px;
+    height: 140px;
+    /*position: absolute;*/
+    /*background-color: darkmagenta;*/
+    font-size: 25px;
+    font-weight: 700;
+    /*overflow: hidden;*/
+}
+#register{
+    width: 180px;
+    height: 40px;
+    transition: .2s ease;
+    position: absolute;
+    top: 27px;
+    left: 295px;
+    text-align: center;
+    line-height: 20px;
+}
+#register:hover{
+    cursor: pointer;
+    color: #0099cc;
+    transform: scale(1.08);
+}
+#boxBtn{
+    width: 285px;
+    height: 52px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+.rookieBtn{
+    border: 1px solid #99cccc;
+    width: 140px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    color: #969696;
+    transition: .2s ease;
+}
+.rookieBtn:hover{
+    cursor: pointer;
+}
+#newfeedBtn:hover, #rookieBtn:hover {
+    color: #fff;
+    background-color: #99cccc;
+}
+.on{
+    background-color: #99cccc;
+    color:#fff ;
+}
+.box_search:hover{
+    color: #99cccc;
+    cursor: pointer;
+}
+
+.box_search{
+    width: 50px;
+    color: #969696;
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 47px;
+    border-radius: 25px;
+    border: 1px solid #99cccc;
+    transition: .2s ease;
+}
+.box_search input{
+    border: none;
+    background-color: transparent;
+    height: 45px;
+    width: 0px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #969696;
+}
+
+
+#wrapContents {
+    position: relative;
+    min-height:500px;
+    transition: .2s ease;
+}
+#boxNewfeed{
+    width: 1000px;
+    min-height: 500px;
+    position: relative;
+    /*background-color: mediumvioletred;*/
+
+}
+
+#boxRookie{
+    display: none;
+    width: 1000px;
+    min-height: 500px;
+    /*background-color: hotpink;*/
+    position: relative;
+
+}
+#boxNewfeed .card_rookie_contents{
+    position: relative;
+    float: left;
+    margin: 10px;
+
+}
+.showContents{
+    width: 1000px;
+    height: 330px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.showContents ul{
+    position: relative;
+    left: 0px;
+    width: 3000px;
+    height: 330px;
+    transition: .4s ease-in-out;
+}
+.showContents ul li{
+    position: relative;
+    width: 230px;
+    height: 330px;
+    float: left;
+    margin:0 10px 10px 10px;
+
+}
+
+#boxPopContents .nav{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    font-size: 60px;
+    color: #99cccc;
+    cursor: pointer;
+    top: 135px;
+    transition: .2s ease;
+}
+#boxPopContents .nav.pop_LeftBtn{
+    left: 60px;
+}
+#boxPopContents .nav.pop_RightBtn{
+    right: 60px;
+}
+#boxPopContents .nav:hover{
+    color: #0099cc;
+
+}
+
+
+.place{
+    position: absolute;
+    z-index: 4;
+    display: block;
+    top: 3px;
+    right: 10px;
+}
+.cover.monthly .like, .cover.monthly .view, .cover.monthly .comments{
+    display: block;
+    text-shadow: #999 1px 1px 2px;
+}
+.cover.monthly .like{
+    font-size: 23px;
+    top: 133px;
+}
+
+.showContents ul li.rookie1st{
+    width: 1000px;
+    margin: 0px;
+}
+.place.first{
+    right: 40px;
+}
+.wrap1st{
+    width: 990px;
+    height: 330px;
+    position: relative;
+    left: 10px;
+}
+.firstRep{
+    display: block;
+    position: absolute;
+}
+.rookie1st_title{
+    width: 588px;
+    height: 328px;
+    text-align: right;
+    line-height: 30px;
+    position: absolute;
+    left: 400px;
+}
+.rookie1st_title>h1{
+    font-size: 40px;
+    display: block;
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    top:100px;
+    right: 40px;
+    text-align: right;
+    text-shadow: #eef 1px 1px 3px;
+}
+.rookie1st_title>h2{
+    color: #99cccc;
+    font-size: 23px;
+    display: block;
+    position: absolute;
+    top:150px;
+    right: 40px;
+    text-shadow: #eef 1px 1px 3px;
+}
+.rookie1st_title>p{
+    display: block;
+    position: absolute;
+    font-size: 15px;
+    top: 190px;
+    right: 40px;
+    color: #969696;
+    width: 480px;
+    height: 42px;
+}
+.rookie1st_title .hit{
+    width: 100px;
+    height: 25px;
+    font-size: 25px;
+    position: absolute;
+    bottom: 30px;
+    color: #626262;
+    text-shadow: #eef 1px 1px 3px;
+    text-align: left;
+}
+.rookie1st_title .hit.f_like{
+    right: 40px;
+    font-size: 30px;
+}
+.hit.f_like i{
+    color: red;
+}
+.rookie1st_title .hit.f_view{
+
+    left: 30px;
+
+}
+.rookie1st_title .hit.f_comments{
+
+    left: 150px;
+}
+.firstRookie{
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: -10px;
+    min-width: 230px;
+    height: 60px;
+    color: #0099cc;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 50px;
+    padding:0 30px;
+    border: 1px solid #99cccc;
+    background-color: rgba(255,255,255,.7);
+    text-shadow: #99cccc 1px 1px 2px;
+}
+.firstRookie::before{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: block;
+    border-right: 10px solid #0099cc;
+    border-bottom: 10px solid transparent;
+    top: 61px;
+    left:-1px;
+}
+.rookie1st_cover{
+    cursor: pointer;
+    left: 10px;
+    width: 990px;
+    height: 330px;
+    position: absolute;
+    z-index: 2;
+    transition: .4s ease;
+
+}
+.rookie1st_cover:hover{
+    background-color: rgba(100,100,100,.2);
+}

@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* member list */
+#memberList {
+    width: 990px;
+    min-height: 100px;
+    padding: 5px;
+    margin-top: 35px;
+    border-bottom: 1px solid #cccccc;
+    overflow: hidden;
+}
+#memberList .list {
+    width: 100%;
+    padding: 20px 0;
+    overflow-x: auto;
+    transition: .2s ease;
+}
+#memberList h2 {
+    padding: 5px;
+    border-bottom: 1px solid #cccccc;
+    margin: 5px auto;
+    font-size: 25px;
+    color: #424242;
+}
+#memberList h2 i {
+    cursor: pointer;
+}
+#memberList ul {
+    height: 100px;
+    overflow: hidden;
+}
+#memberList li {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+    border: 5px solid #eeeeee;
+    border-radius: 50px;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    overflow: hidden;
+    transition: .2s ease;
+}
+#memberList li>i {
+    font-size: 25px;
+    color: #424242;
+    transition: .2s ease;
+}
+#memberList li:hover {
+    border-color: #aaaaaa;
+}
+#memberList li:hover i {
+    color: #eeeeee;
+}
+#memberList img {
+    width: 90px;
+}
+#memberList .cover {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    color: transparent;
+    text-align: center;
+    line-height: 100px;
+    transition: .5s ease;
+}
+#memberList li:hover .cover{
+    background: rgba(255,255,255,.8);
+    border-color: #0099cc;
+    color: #0099cc;
+}
+#memberList a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+/* indie tab */
+#indieTab {
+    width: 1000px;
+    min-height: 100px;
+}
+#indieTab h3 {
+    margin: 10px 0 20px;
+    font-size: 25px;
+    text-align: left;
+}
+#indieTab .tab_list {
+    padding: 10px 0;
+    border-bottom: 1px solid #cccccc;
+}
+#indieTab .tab_list ul {
+    width: 1000px;
+    height: 40px;
+}
+#indieTab .tab_list li {
+    width: 70px;
+    height: 40px;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+#indieTab .tab_list li.on {
+    background: #99cccc;
+    color: white;
+}
+#indieTab .indie_tab {
+    display: none;
+    position: relative;
+    width: 990px;
+    min-height: 339px;
+    padding: 5px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+#indieTab .indie_content_main {
+    display: block;
+}

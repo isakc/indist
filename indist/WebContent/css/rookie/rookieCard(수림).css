@@ -1,0 +1,74 @@
+.card_rookie{
+    width: 230px;
+    height: 320px;
+    background-color: #eef;
+    position: relative;
+    float: left;
+    margin: 10px;
+
+}
+
+.card_rookie:hover{
+    cursor: pointer;
+
+}
+
+.card_rookie span{
+    color: #969696;
+    display: block;
+    position: absolute;
+}
+.card_rookie em{
+    text-align: center;
+    display: block;
+    width: 180px;
+    color: #99cccc;
+    position: absolute;
+    top:180px;
+    left: 25px;
+    font-size: 20px;
+}
+
+.card_rookie_profile{
+    width: 148px;
+    height: 148px;
+    border-radius: 200px;
+    background-image: url(img/ex_Rep_Image.jpg);
+    position: absolute;
+    top:20px;
+    left: 40px;
+    border: 1px solid #99cccc;
+}
+
+.rookie_genre{
+    width: 80px;
+    height:8px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 6px;
+    font-size: 15px;
+    background-color: rgba(0,0,0,.2);
+    color: #424242;
+    padding: 10px;
+    position: absolute;
+    top: 210px;
+    left: 65px;
+}
+.c_audio{
+    top:245px;
+    left: 75px;
+    font-size: 14px;
+}
+.c_video{
+    top:245px;
+    right: 75px;
+    font-size: 14px;
+}
+.c_follow{
+    width: 100px;
+    text-align: center;
+    top:280px;
+    left: 65px;
+    font-size: 16px;
+
+}

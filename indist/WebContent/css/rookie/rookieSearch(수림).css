@@ -1,0 +1,107 @@
+body{
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+#sectionAfterSearch{
+    position: relative;
+    /*background: blue;*/
+    width: 1000px;
+    min-height: 10px;
+    margin: auto;
+    overflow: hidden;
+}
+#boxSearch{
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    /*background: red;*/
+    width: 235px;
+    height: 50px;
+    color: #969696;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 47px;
+    border-radius: 25px;
+    border: 1px solid #99cccc;
+    transition: .2s ease;
+}
+#boxSearch:hover{
+    color: #99cccc;
+    cursor: pointer;
+}
+
+#boxSearch input{
+    border: none;
+    background-color: transparent;
+    height: 45px;
+    width: 170px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #969696;
+}
+#more{
+    width: 120px;
+    height: 40px;
+    /*background-color: orangered;*/
+    position: relative;
+    /*top:20px;*/
+    float: right;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px;
+}
+#more:hover{
+    cursor: pointer;
+}
+#contentsWrap{
+    width: 1000px;
+    min-height: 500px;
+    position: relative;
+    margin-top: 100px;
+    /*background-color: lawngreen;*/
+}
+#boxSearchContents{
+    position: relative;
+    width: 1000px;
+    /*background-color:salmon;*/
+}
+#boxSearchContents ul{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#boxSearchContents li{
+    float: left;
+}
+
+#boxSearchRookies ul {
+    position: relative;
+    /*background: green;*/
+    width: 100%;
+    overflow: hidden;
+}
+#boxSearchRookies li {
+
+    float: left;
+}
+#boxSearchContents .card_rookie_contents{
+    margin: 10px;
+    position: relative;
+    /*float: left;*/
+}
+#boxSearchRookies{
+    position: relative;
+    width: 1000px;
+    min-height: 400px;
+    /*background-color: seagreen;*/
+    margin-top: 60px;
+    /*top:100px;*/
+    /*display: none;*/
+}

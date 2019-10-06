@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+#hotIndie {
+    background: #99cccc;
+    height: 340px;
+    padding: 5px 0;
+    text-align: center;
+    position: relative;
+}
+#hotIndie .arrow {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 70px;
+    height: 330px;
+    cursor: pointer;
+    line-height: 330px;
+    font-size: 25px;
+    transition: .2s ease;
+}
+#hotIndie .arrow:hover {background: rgba(0,0,0,.2);}
+#hotIndie .left {left: 0;}
+#hotIndie .right {right: 0;}
+#hotIndieList {
+    position: relative;
+    width: 1000px;
+    height: 330px;
+    margin: auto;
+    overflow: hidden;
+}
+#hotIndieList ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3001px;
+    height: 330px;
+    transition: .3s ease;
+}
+#hotIndieList li {
+    position: relative;
+    width: 333.35px;
+    height: 330px;
+    float: left;
+}
+#hotIndieList img {
+	width: 333.35px;
+	height: 330px;
+}
+
+#hotIndieList .cover {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 293.35px;
+    height: 290px;
+    line-height: 310px;
+    border: 20px solid transparent;
+    transition: .5s ease;
+    color: transparent;
+}
+#hotIndieList li:hover .cover {
+    background: rgba(255,255,255,.8);
+    border-color: #0099cc;
+    color: #0099cc;
+}
+#hotIndieList a {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    display: block;
+    width: 333.35px;
+    height: 330px;
+}

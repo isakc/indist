@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+#snsWriteBox {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    z-index: 2;
+    width: 60px;
+    height: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px #424242;
+}
+
+#snsWriteBox .btn_sns_write {
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+#snsWriteBox .sns_write_form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background: #eeeeee;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-radius: 15px;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+#snsWriteBox .sns_write_form.on {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 630px;
+    height: 380px;
+    padding: 10px;
+    margin: -200px 0 0 -325px;
+}
+
+#snsWriteBox .sns_write_form h4 {
+    margin: 5px 0;
+    font-size: 35px;
+}
+
+#snsContent {
+    width: 614px;
+    height: 241px;
+    padding: 5px;
+    margin: 5px 0;
+    border: 3px solid #424242;
+    border-radius: 5px;
+    font-size: 20px;
+    resize: none;
+}
+
+#snsFile {
+    width: 630px;
+}
+
+#snsWrite {
+    width: 70px;
+    height: 30px;
+    border: 2px solid #424242;
+    margin: 10px 0;
+    border-radius: 5px;
+    line-height: 24px;
+}
+
+#snsLists, #snsLists2 {
+    position: relative;
+    padding-top: 50px;
+    overflow: hidden;
+}
+#snsLists .sns_timeline, #snsLists2 .sns_timeline {
+    position: absolute;
+    top: 50px;
+    left: 490px;
+    background: #dddddd;
+    width: 10px;
+    height: 100%;
+}
+#snsLists .sns_refresh, #snsLists2 .sns_refresh {
+    position: absolute;
+    top: -35px;
+    left: -12.75px;
+    background: url(../../../img/indie/etc/btn_timeline_refresh.png) 0 0;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#snsLists .list_left, #snsLists2 .list_left {
+    width: 460px;
+    float: left;
+}
+
+#snsLists .list_right, #snsLists2 .list_right {
+    width: 460px;
+    float: right;
+}
+
+#snsLists ul, #snsLists2 ul {
+    width: 450px;
+    min-height: 200px;
+    padding: 0 5px;
+}
+
+#snsLists li, #snsLists2 li {
+    position: relative;
+    width: 448px;
+    height: 198px;
+    border: 1px dashed #424242;
+    border-radius: 20px;
+    margin: 5px 0;
+}
+
+#snsLists .content_sns_view, #snsLists2 .content_sns_view {
+    position: absolute;
+    left: 10px;
+    z-index: 1;
+    width: 208px;
+    height: 158px;
+    border: 1px solid #424242;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+#snsLists .sns_default .content_sns_view, 
+#snsLists .sns_default2 .content_sns_view {display: none;}
+
+#snsLists .content_sns_view img,
+#snsLists2 .content_sns_view img {width: 208px;}
+#snsLists .content_sns_view video,
+#snsLists2 .content_sns_view video {
+    position: absolute;
+    top: -56px;
+    left: -136px;
+    width: 480px;
+}
+
+#snsLists .content_ico, #snsLists2 .content_ico {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1;
+    background: url(../../../img/indie/etc/ico_sns_list.png) no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border: 2px solid #424242;
+    border-radius: 15px;
+}
+#snsLists .sns_photo .content_ico,
+#snsLists2 .sns_photo .content_ico {background-position: 0 0;}
+#snsLists .sns_camcorder .content_ico,
+#snsLists2 .sns_camcorder .content_ico {background-position: -25px 0;}
+
+#snsLists .content_sns_word,
+#snsLists2 .content_sns_word {
+    position: absolute;
+    right: 10px;
+    width: 200px;
+    height: 150px;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 5px;
+    margin: 10px 0;
+    overflow: auto;
+    word-break: break-word;
+    text-align: left;
+}
+#snsLists .sns_default .content_sns_word,
+#snsLists2 .sns_default .content_sns_word {width: 418px;}
+
+#snsLists .content_sns_regdate, #snsLists .btn_content_view,
+#snsLists2 .content_sns_regdate, #snsLists2 .btn_content_view {
+    position: absolute;
+    bottom: 8px;
+    font-size: 13px;
+}
+
+#snsLists .content_sns_regdate,
+#snsLists2 .content_sns_regdate {left: 15px;}
+
+#snsLists .btn_content_view,
+#snsLists2 .btn_content_view {
+    right: 20px;
+    cursor: pointer;
+}
+
+#snsLists .btn_content_view:hover em,
+#snsLists2 .btn_content_view:hover em {text-decoration: underline;}
+
+#snsLists .sns_timeline_over,
+#snsLists2 .sns_timeline_over {
+    position: absolute;
+    z-index: 1;
+    background: #eeeeee;
+    width: 45px;
+    height: 5px;
+}
+#snsLists .list_left .sns_timeline_over,
+#snsLists2 .list_left .sns_timeline_over {
+    top: 30px;
+    right: -46px;
+}
+
+#snsLists .list_right .sns_timeline_over,
+#snsLists2 .list_right .sns_timeline_over {
+    top: 75px;
+    left: -46px;
+}
+#snsLists .list_left .sns_timeline_over:before,
+#snsLists .list_right .sns_timeline_over:after,
+#snsLists2 .list_left .sns_timeline_over:before,
+#snsLists2 .list_right .sns_timeline_over:after {
+    content: '';
+    position: absolute;
+    top: -7.5px;
+    border: 10px solid transparent;
+}
+#snsLists .list_left .sns_timeline_over:before,
+#snsLists2 .list_left .sns_timeline_over:before {
+    left: 0;
+    border-left-color: #eeeeee;
+}
+#snsLists .list_right .sns_timeline_over:after,
+#snsLists2 .list_right .sns_timeline_over:after {
+    right: 0;
+    border-right-color: #eeeeee;
+}
+
+#snsLists li .sns_timeline_icon,
+#snsLists2 li .sns_timeline_icon {
+    position: absolute;
+    top: -17.5px;
+    background: url(../../../img/indie/etc/icon_timeline_161228.png) no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#snsLists .sns_default .sns_timeline_icon,
+#snsLists2 .sns_default .sns_timeline_icon {background-position: -396px 0;}
+#snsLists .sns_photo .sns_timeline_icon,
+#snsLists2 .sns_photo .sns_timeline_icon {background-position: 0 0;}
+#snsLists .sns_camcorder .sns_timeline_icon,
+#snsLists2 .sns_camcorder .sns_timeline_icon {background-position: -88px 0;}
+
+#snsLists .list_left .sns_timeline_icon,
+#snsLists2 .list_left .sns_timeline_icon {right: -15px;}
+#snsLists .list_right .sns_timeline_icon,
+#snsLists2 .list_right .sns_timeline_icon {left: -15px;}
+
+#indieTab .indie_content_sns .sns_i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 12.5px;
+    box-shadow: 0 0 1px #424242;
+    cursor: pointer;
+}
+
+#indieTab .indie_content_sns .sns_i:hover {box-shadow: 0 0 5px #424242;}

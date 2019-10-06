@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+#searchForm {
+    width: 300px;
+    height: 100px;
+    position: relative;
+    margin: auto;
+}
+
+#indieSearchForm {
+    margin-top: 40px;
+    width: 260px;
+    height: 29px;
+    padding: 0 15px;
+    line-height: 29px;
+    border: 3px solid #99cccc;
+    border-radius: 17.5px;
+    background-color: white;
+}
+
+#q {
+    position: absolute;
+    top: 2px;
+    width: 230px;
+    height: 23px;
+    padding: 0 25px 0 5px;
+    border: none;
+    outline: none;
+    font-family: "Noto Sans KR",sans-serif;
+    font-size: 15px;
+    transition: .2s ease;
+}
+
+#indieSearchForm .btn_search {
+    position: absolute;
+    top: 5px;
+    right: 17.5px;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+#indieAutoFrame {
+    position: absolute;
+    top: 40px;
+    left: 3px;
+    z-index: 1;
+    background: white;
+    width: 345px;
+    min-height: 0;
+    padding: 0;
+    box-shadow: 0 0 5px #424242;
+    border-radius: 0 5px 10px 0;
+    /*overflow: hidden;*/
+    transition: .2s ease;
+}
+
+#indieAutoFrame.on {
+    padding: 10px;
+}
+
+#indieAutoFrame h3 {
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#indieAutoFrame .search_indie,
+#indieAutoFrame .search_album,
+#indieAutoFrame .search_music {
+    width: 345px;
+    padding: 5px 0;
+}
+
+#indieAutoFrame .search_album {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+#indieAutoFrame li {
+    position: relative;
+    width: 335px;
+    height: 50px;
+    padding: 0 5px;
+    overflow: hidden;
+    transition: .1s ease;
+}
+
+#indieAutoFrame li:hover {
+    background: rgba(0,0,0,.1);
+}
+
+#indieAutoFrame a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 345px;
+    height: 60px;
+    color: #424242;
+}
+
+#indieAutoFrame img {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 1px #424242;
+}
+
+#indieAutoFrame .musician_info,
+#indieAutoFrame .album_info,
+#indieAutoFrame .music_info {
+    position: absolute;
+    left: 50px;
+    width: 295px;
+    height: 50px;
+}
+
+#indieAutoFrame .search_indie .musician_name,
+#indieAutoFrame .search_album .album_name,
+#indieAutoFrame .search_music .music_name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 295px;
+    font-size: 15px;
+}
+
+#indieAutoFrame .search_indie .debut_genre,
+#indieAutoFrame .search_album .musician_name,
+#indieAutoFrame .search_music .musician_name {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    max-width: 295px;
+    font-size: 10px;
+}
+
+/* 2017.06.19 신애 추가 */
+#box_artist_checking .search_artist{
+    position: absolute;
+    top:50%;
+    left: 550px;
+    width: 550px;
+    min-height: 430px;
+    border: 3px solid #999999;
+    border-radius: 3px;
+    margin-top: 0;
+    margin-left: -275px;
+    background-color: #e8e8e8;
+    display: none;
+}
+
+.overflow{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bg{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#artistNameCard ul li {
+    width: 250px;
+    height: 80px;
+    margin: 5px;
+    float: left;
+}
+
+#artistNameCard ul{
+    width:520px;
+    min-height: 80px;
+    margin-top: 2px;
+    overflow: hidden;
+    background: white;
+}
+
+
+#artistNameCard{
+    width:520px;
+    min-height: 80px;
+    margin: auto;
+}
+
+.nameCard_rookie{
+    position: absolute;
+    width: 210px;
+    height: 40px;
+    background-color: #fff;
+    padding: 20px;
+    color: #969696;
+    z-index: 3;
+    overflow: hidden;
+    border: 1px solid #99cccc;
+}
+.nameCard_rookie:hover{
+    cursor: pointer;
+}
+.search_artist .nameCard_rookie a{
+    text-decoration: none;
+    width: 160px;
+    height: 20px;
+    display: block;
+    margin-bottom: 5px;
+    color: #99cccc;
+    font-size: 20px;
+    transition: .2s ease;
+}
+.nameCard_rookie a:hover{
+    color: #0099cc;
+}
+.nameCard_rookie_profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #424242;
+    background-image: url(../img/k1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -30px;
+    float: right;
+}
+
+.nameCard_rookie_profile img{
+	width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #424242;
+    background-image: url(../img/k1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+}
+
+.exo{
+    position: absolute;
+    top: -30px;
+    right: -120px;
+    font-size: 30px;
+    color: #424242;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}

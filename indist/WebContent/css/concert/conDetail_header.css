@@ -1,0 +1,551 @@
+ac@charset "UTF-8";
+
+body{
+    font-family:'Kakao', sans-serif;
+    line-height:1.3em ;
+}
+
+textarea{
+			outline: none;        
+        }
+
+li>a{
+    text-decoration: none;
+}
+
+.btn_ticket{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #99cccc;
+    background-color: #99cccc;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.box_ticketing_btn {
+    width: 1000px;
+    height: 32px;
+}
+
+#box_cont{
+    width: 1000px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    line-height: 50px;
+}
+
+#box_cont_tab{
+    background-color: #F5F5F5;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#box_cont_tab>.on {
+    border-bottom: 1px solid #B2DFDB;
+}
+
+#box_cont_tab>.cont_tab{
+    width: 100px;
+    height: 50px;
+    border: 1px solid #F5F5F5;
+    background-color: #F5F5F5;
+    font-size: 15px;
+    font-family:'Kakao', sans-serif;
+    float: left;
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+#box_cont>#box_cont_tab>.cont_tab>a{
+    color: #444444;
+    width: 183px;
+    height: 50px;
+    display: block;
+}
+
+#box_cont>#box_cont_tab>.cont_tab>a:hover {
+    color: #999999;
+}
+
+#concertDetailPoster {
+    /* background: red;*/
+    /*position: absolute;*/
+    width:1000px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #E0E0E0;
+    margin-top: 40px;
+}
+
+
+#concertDetailPoster .con_info table{
+    border: 1px solid white;
+    color: #999999;
+    margin-top: 50px;
+}
+
+.con_info table tr,td,th{
+    border: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    text-align: left;
+}
+
+.con_info table, h1, p{
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.con_img_poster, .con_info{
+    margin: 10px;
+    float: left;
+}
+
+.con_info h1{
+    font-size: 30px;
+    color: #424242;
+}
+
+.con_info p{
+    font-size: 20px;
+    color: #999999;
+}
+
+.box_ticketing_process {
+    width:1000px;
+    margin: auto;
+    overflow: hidden;
+    /*background: red;*/
+    padding-left: 180px;
+}
+
+.box_ticketing_process img{
+    width: 140px;
+    margin-top: 5px;
+}
+
+.box_ticketing_process>.date_choice>.tit_date_choice>.date_choice_arrow {
+    width: 30px;
+}
+
+.date_choice {
+    width: 180px;
+    height: 40px;
+    float: left;
+}
+
+#concert_footer>img{
+    margin-top: 80px;
+    width: 1000px;
+}
+
+#box_ticketing_browser{
+    width: 1000px;
+    min-height: 200px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: none;
+}
+
+.ticketing_date_choice, .ticketing_time_choice{
+    width:498px;
+    min-height: 199px;
+    border: 1px solid #999999;
+    border-radius: 2px;
+    float: left;
+    text-align: center;
+}
+
+.ticketing_date_choice .ticketing_date_choice_last{
+	border: 0px;
+}
+
+.ticketing_time_choice{
+    border-left: 0;
+}
+
+.ticketing_time_choice>ul>li>a{
+    display: block;
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    color: #676767;
+    text-align: center;
+    line-height: 30px;
+    border: 5px solid transparent;
+    display: none;
+}
+
+.ticketing_time_choice>ul>li>a:hover{
+    border: 5px solid #99cccc;
+}
+
+.ticketing_date_choice, .ticketing_time_choice >ul{
+    width: 476px;
+    height: 199px;
+    padding: 10px;
+}
+
+.ticketing_date_choice >ul>li, .ticketing_time_choice >ul>li{
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin: auto;
+    border-bottom: 1px solid #999999;
+    cursor: pointer;
+    color: #676767;
+}
+
+.ticketing_date_choice >ul>li:hover{
+    color: #99cccc ;
+}
+
+/* 좌석 선택 */
+#box_ticketing_seat_choice{
+    width: 1000px;
+    height: 550px;
+    border: 2px solid #676767;
+    padding-top: 10px;
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -275px;
+    background: white;
+}
+
+.tit_seat_choice {
+    margin-bottom: 10px;
+}
+
+.tit_seat_choice>strong{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tit_seat_choice>select{
+    margin-left: 248px;
+    font-size: 15px;
+    padding: 3px;
+}
+
+.seat_choice{
+    width: 800px;
+    height: 544px;
+    float: left;
+    background: white;
+}
+
+.seat_select{
+    width: 798px;
+    height: 480px;
+    background: #E0E0E0;
+}
+
+/* 2017.06.18 신애 변경  */
+.seat_check_notice{
+    width: 800px;
+    height: 70px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.seat_check_notice h1{
+    font-size: 25px;
+    height: 45px;
+    color: #777777;
+    margin-top: 0px;
+    line-height: 45px;
+}
+
+.seat_check_notice h2{
+    font-size: 12px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+/* 2017.06.18 신애 변경  */
+
+.seat_choice_notice{
+    width: 800px;
+    height: 44px;
+    background: #444444;
+    color: #999999;
+    text-align: left;
+    line-height: 44px;
+}
+
+.seat_choice_notice>span{
+    margin-left: 10px;
+}
+
+.seat_sidebar{
+    width: 200px;
+    height: 524px;
+    float: left;
+}
+
+.dng_logo{
+    width: 198px;
+    height: 100px;
+    background: white;
+}
+
+.dng_logo>img{
+    width: 198px;
+    height: 100px;
+}
+
+/* 2017.06.19 신애 추가*/
+.seat_rc{
+    width: 200px;
+    height: 36px;
+    line-height: 40px;
+    border-top: 2px solid #999999;
+    border-bottom: 2px solid #999999;
+    background-color: white;
+    font-size: 12px;
+}
+/* 2017.06.19 신애 추가*/
+
+.seat_rc>span{
+    margin-left: 10px;
+    color: #424242;
+}
+
+.seat_type{
+    width: 200px;
+    height: 314px;
+    background: #E0E0E0;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.seat_type>ul{
+    width: 180px;
+    height: 20px;
+    margin: 10px;
+}
+
+.seat_type>ul>li{
+    margin: 4px;
+}
+
+.seat_block{
+    width: 14px;
+    height: 14px;
+    background: yellowgreen;
+}
+
+.seat_left{
+    float: left;
+}
+
+.seat_right{
+    float: right;
+}
+
+.seat_btn{
+    width: 200px;
+    height: 70px;
+    background: #676767;
+    text-align: center;
+    line-height: 70px;
+}
+
+.seat_btn a{
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-decoration: none;
+    color: #BDBDBD;
+}
+
+/* 결제 css */
+
+#box_ticketing_prise{
+    width: 1020px;
+    height: 550px;
+    overflow: hidden;
+    margin: auto;
+    display: none;
+    border: 5px solid #676767;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -510px;
+    margin-top: -275px;
+    background: white;
+}
+
+.pay_way{
+    width: 694px;
+    height: 528px;
+    padding: 10px;
+    float: left;
+}
+
+.pay_strong{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user_info_pay{
+    width: 650px;
+    height: 140px;
+    background: #F5F5F5;
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.user_info_pay>strong{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.pay_user, .pay_user_phone, .pay_user_email {
+    margin-top: 10px;
+}
+
+.pay_user_email>input{
+    width: 170px;
+    height:20px;
+}
+
+
+.pay_user_phone>.user_phone_fir ,.user_phone_sec,.user_phone_thr{
+    width: 50px;
+    height: 20px;
+}
+
+.pay_type{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.user_pay_type{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.user_deposit_pay table {
+    width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+.user_deposit_pay th,.user_deposit_pay td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+}
+
+.pay_result{
+    width: 260px;
+    height: 550px;
+    float: left;
+    border-left: 5px solid #676767;
+}
+
+.pay_result>strong{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.tit_pay_result{
+    width: 240px;
+    height: 60px;
+    padding: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: -15px;
+}
+
+.pay_seat_result{
+    width: 220px;
+    height: 160px;
+    padding: 5px;
+    margin: auto;
+    border: 1px solid #999999;
+    background: #E0E0E0;
+}
+
+.pay_result_won{
+    width: 220px;
+    border: 1px solid #999999;
+    height: 100px;
+    overflow: hidden;
+    padding: 5px;
+    margin: auto;
+    background: #E0E0E0;
+}
+
+.won_strong{
+    width: 220px;
+    margin: 8px;
+    font-weight: 700;
+}
+
+.pay_result_won>.won_left{
+    float: left;
+}
+
+.pay_result_won>.won_right{
+    float: right;
+}
+
+.won_cancle{
+    width: 240px;
+    margin: 15px;
+    font-size: 10px;
+
+}
+
+.pay_btn{
+    width: 310px;
+    height: 150px;
+    overflow: hidden;
+    border-top: 1px solid #676767;
+}
+
+.btn_pay_pre,.btn_pay_confirm{
+    width: 154px;
+    height: 100px;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+}
+
+.btn_pay_confirm{
+    border-left: 1px solid #676767;
+    background: #424242;
+}
+
+.btn_pay_confirm>a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.user_deposit_pay,.user_creditcard_pay{
+    display: none;
+}
+
+

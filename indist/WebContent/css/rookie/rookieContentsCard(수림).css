@@ -1,0 +1,145 @@
+.card_rookie_contents{
+    width: 230px;
+    height: 320px;
+    margin: auto;
+    /*position: absolute;*/
+    /*top:5px;*/
+}
+.rookie_contents li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+.contents_title span{
+    font-size: 14px;
+    color: #969696;
+    display: block;
+    position: absolute;
+}
+.contents_title em{
+    height: 25px;
+    color: black;
+    font-size: 20px;
+    display: block;
+
+}
+.contents_title p{
+    color: #626262;
+    font-size: 12px;
+    width:210px;
+    height:14px;
+    position: absolute;
+    z-index: 2;
+    top: 70px;
+}
+.contents_title strong{
+    position: absolute;
+    font-size: 13px;
+    top:38px;
+    left: 10px;
+    color: #969696;
+}
+.cover:hover .like,.cover:hover .view,.cover:hover .comments{
+    display: block;
+    text-shadow: #999 1px 1px 2px;
+}
+.sort{
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 35px;
+    font-size: 20px;
+    background-color: rgba(0,0,0,.3);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+.contents_rep_image{
+    width: 230px;
+    height: 160px;
+    background-image: url(img/ex_Rep_Image.jpg) ;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.contents_title{
+    width: 210px;
+    height: 80px;
+    position: absolute;
+    top:160px;
+    left: 0;
+    padding: 10px;
+    background-color: #eef;
+    text-align: left;
+}
+.view{
+    font-size: 14px;
+    color: #eeeeee;
+    position: absolute;
+    display: none;
+    top:140px;
+    left: 10px;
+
+}
+.comments{
+    font-size: 14px;
+    color: #eee;
+    position: absolute;
+    display: none;
+    top:140px;
+    left: 70px;
+}
+.like{
+
+    display: none;
+    position: absolute;
+    top:140px;
+    right: 10px;
+    color: #eee;
+}
+.like i{
+    color: red;
+}
+.nameCard_rookie{
+    position: absolute;
+    width: 210px;
+    height: 40px;
+    background-color: #fff;
+    padding: 10px;
+    color: #969696;
+    z-index: 3;
+}
+.nameCard_rookie:hover{
+    cursor: pointer;
+}
+.nameCard_rookie a{
+    width: 160px;
+    height: 20px;
+    display: block;
+    margin-bottom: 5px;
+    color: #99cccc;
+    font-size: 20px;
+    transition: .2s ease;
+}
+.nameCard_rookie a:hover{
+    color: #0099cc;
+}
+.nameCard_rookie_profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #99cccc;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-image: url(img/ex_Rep_Image.jpg);
+
+}
+.card_rookie_contents .cover {
+    position: absolute;
+    top:0;
+    left:0;
+}

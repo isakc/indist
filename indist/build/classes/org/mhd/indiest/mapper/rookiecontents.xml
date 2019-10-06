@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org/DTD/Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="rookiecontents">
+	<select id="selectContentsLike" parameterType="int" resultType="RookieContent">
+		SELECT rc.no, rc.contentfile, rc.coverimg, rc.title, rc.contents, rc.lyrics, rc.hit, rc.typeno,
+	    	   rc.rookieno, rc.genreno, rc.regdate, g.name genre, NVL(replies,0) replies, 
+	    	   NVL(rookieLike,0) rookieLike, NVL(contentLike,0) contentLike, g.name genre, r.name rookieName, 
+	    	   r.profile rookieImg 
+	    FROM (SELECT contentNo, count(*) replies
+	  		  FROM replies
+	  		  WHERE typeNo = 24
+	  		  GROUP BY contentNo) p,
+	 		 (SELECT connectNo, count(*) rookieLike
+	 		  FROM express
+	  		  WHERE typeNo=16
+	  		  AND contentType = 2
+	  		  GROUP BY connectNo) rl, 
+	 		 (SELECT connectNo, count(*) contentLike
+	  		  FROM express
+	  		  WHERE typeNo = 16
+			  AND contentType = 24
+	  		  GROUP BY connectNo) cl ,rookies r, rookieContents rc, genres g
+		WHERE p.contentNo(+) = rc.no
+		AND rl.connectNo(+) = r.no
+		AND cl.connectNo(+) = rc.no
+		AND g.no = rc.genreNo
+		AND r.no = rc.rookieNo
+		AND RC.NO = (SELECT connectNo
+	  				 FROM express
+	  				 WHERE typeNo = 16
+	  				 AND contentType = 24
+	  				 AND userNo = #{userNo}
+	  				 GROUP BY connectNo)
+	</select>
+</mapper>

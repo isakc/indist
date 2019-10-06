@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+#musicSearch {
+	max-height: 262px;
+}
+#musicSearch span {font-weight: bold;}
+#musicSearch table {margin: 5px auto;}
+
+#musicSearch table,
+#musicSearch th,
+#musicSearch td,
+#indieTab .indie_content_song table,
+#indieTab .indie_content_song th,
+#indieTab .indie_content_song td {
+    position: relative;
+    height: 20px;
+    padding: 4px 5px;
+    box-shadow: 0 0 1px #aaaaaa;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+}
+#musicSearch .song_check,
+#indieTab .indie_content_song .song_check {width: 20px}
+#musicSearch .song_no,
+#indieTab .indie_content_song .song_no {width: 46px;}
+#musicSearch .song_name,
+#musicSearch .song_song,
+#indieTab .indie_content_song .song_name,
+#indieTab .indie_content_song .song_song {width: 389px;}
+#musicSearch .song_artist,
+#indieTab .indie_content_song .song_artist {width: 167px;}
+#musicSearch .song_album,
+#indieTab .indie_content_song .song_album {width: 318px;}
+#musicSearch .align_left,
+#indieTab .indie_content_song .align_left {
+    text-align: left;
+}
+#musicSearch table span,
+#indieTab .indie_content_song table span {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}
+#musicSearch a,
+#indieTab .indie_content_song a {
+    display: inline-block;
+    height: 20px;
+    text-decoration: none;
+    font-weight: normal;
+    color: #424242
+}
+#musicSearch a:hover,
+#indieTab .indie_content_song a:hover {
+    text-decoration: underline;
+}
+
+#musicSearch .title_song:before,
+#indieTab .indie_content_song .title_song:before {
+    content: '';
+    display: inline-block;
+    background: url(../../../img/indie/etc/icon_sprite_songlist02.png) no-repeat 0 1px;
+    width: 35px;
+    height: 16px;
+}
+
+#musicSearch .song_name,
+#indieTab .indie_content_song .song_name {max-width: 389px;}
+#musicSearch .title_song .song_name,
+#indieTab .indie_content_song .title_song .song_name {max-width: 350px;}
+#musicSearch .artist_name,
+#indieTab .indie_content_song .artist_name {max-width: 167px;}
+#musicSearch .album_name,
+#indieTab .indie_content_song .album_name {max-width: 318px;}
+
+/* artist 더보기 */
+#musicSearch .song_artist i,
+#indieTab .indie_content_song .song_artist i {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+#musicSearch .artists_name,
+#indieTab .indie_content_song .artists_name {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 1;
+    display: none;
+    background: #dddddd;
+    width: 145px;
+    min-height: 20px;
+    padding: 5px 10px;
+    border-radius: 5px 0 5px 5px;
+    text-align: left;
+    overflow: hidden;
+}
+#musicSearch .artists_name li,
+#indieTab .indie_content_song .artists_name li {
+    height: 20px;
+    margin: 5px 0;
+}
+
+#musicSearch .artists_name a,
+#indieTab .indie_content_song .artists_name a {
+    display: inline-block;
+    background: #eeeeee;
+    max-width: 139px;
+    height: 20px;
+    padding: 0 3px;
+    border-radius: 5px;
+}
+#musicSearch .more {display: none;}
+#musicSearch .more.on {display: table-row;}

@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+#contentAux {
+	min-height: 865px;
+	padding: 40px 0;
+}
+#searchForm {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 300px;
+    height: 35px;
+}
+#indieSearchForm {
+    position: absolute;
+    left: 0;
+    width: 260px;
+    height: 29px;
+    padding: 0 15px;
+    line-height: 29px;
+    border: 3px solid #99cccc;
+    border-radius: 17.5px;
+}
+#q {
+    position: absolute;
+    top: 2px;
+    width: 230px;
+    height: 23px;
+    padding: 0 25px 0 5px;
+    border: none;
+    outline: none;
+    font-family: "Noto Sans KR",sans-serif;
+    font-size: 15px;
+    transition: .2s ease;
+}
+#indieSearchForm .btn_search {
+    position: absolute;
+    top: 5px;
+    right: 17.5px;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+#indieAutoFrame {
+    position: absolute;
+    top: 40px;
+    left: 3px;
+    z-index: 1;
+    background: white;
+    width: 345px;
+    height: 0;
+    padding: 0;
+    box-shadow: 0 0 5px #424242;
+    border-radius: 0 5px 10px 0;
+    overflow: hidden;
+    transition: .2s ease;
+}
+#indieAutoFrame.on {
+    padding: 10px;
+}
+
+#indieAutoFrame h3 {
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#indieAutoFrame .search_indie,
+#indieAutoFrame .search_album,
+#indieAutoFrame .search_music {
+    width: 345px;
+    padding: 5px 0;
+}
+#indieAutoFrame .search_album {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+#indieAutoFrame li {
+    position: relative;
+    width: 335px;
+    height: 50px;
+    padding: 0 5px;
+    overflow: hidden;
+    transition: .1s ease;
+}
+#indieAutoFrame li:hover {
+    background: rgba(0,0,0,.1);
+}
+#indieAutoFrame a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 345px;
+    height: 60px;
+    color: #424242;
+}
+#indieAutoFrame img {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 1px #424242;
+}
+#indieAutoFrame .musician_info,
+#indieAutoFrame .album_info,
+#indieAutoFrame .music_info {
+    position: absolute;
+    left: 50px;
+    width: 295px;
+    height: 50px;
+}
+
+#indieAutoFrame .search_indie .musician_name,
+#indieAutoFrame .search_album .album_name,
+#indieAutoFrame .search_music .music_name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 295px;
+    font-size: 15px;
+}
+#indieAutoFrame .search_indie .debut_genre,
+#indieAutoFrame .search_album .musician_name,
+#indieAutoFrame .search_music .musician_name {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    max-width: 295px;
+    font-size: 10px;
+}
+#indieSearch, #albumSearch, #musicSearch {
+    position: relative;
+    width: 1000px;
+    padding: 10px 0;
+    margin: 30px 0;
+    text-align: center;
+    overflow: hidden;
+    transition: .2s ease;
+}
+#indieSearch.on, #albumSearch.on, #musicSearch.on {
+	max-height: none;
+	
+}
+#indieSearch.off, #albumSearch.off, #musicSearch.off {
+	max-height: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#indieSearch h3, #albumSearch h3, #musicSearch h3 {
+    padding: 0 0 10px 0;
+    margin: 10px 0 15px;
+    border-bottom: 1px solid #cccccc;
+    font-size: 25px;
+    text-align: left;
+}
+.search_none {
+    display: inline-block;
+    padding: 10px;
+    margin: auto;
+    font-size: 20px;
+}
+#contentAux .btn_more {
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    font-weight: normal;
+    cursor: pointer;
+}
+#contentAux .btn_more:hover {text-decoration: underline}
+#contentAux .btn_top {top: 20px;}
+#contentAux .btn_bottom {bottom: -20px;}
+#contentAux .btn_bottom.on {bottom: 0;}
+#indieSearch ul, #albumSearch ul {
+    position: relative;
+    overflow: hidden;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org/DTD/Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="indies">
+	<select id="selectLikeIndies" parameterType="int" resultType="Indie">
+		SELECT i.no,  i.profile, i.coverimg, i.subtitle, i.pagenotice, i.name, i.debut, i.typeno,
+	    	   i.repgenre, i.regdate, NVL(likes,0) likes, NVL(albums,0) albums, NVL(concerts,0) concerts, g.name genre
+		FROM (SELECT connectNo, count(*) likes
+	  		  FROM express
+	  		  WHERE contentType = 3
+	  		  AND typeNo = 16
+	  		  GROUP BY connectNo) l,
+	 		 (SELECT indieNo, count(*) albums
+	  		  FROM albums
+	  		  GROUP BY indieNo) a,
+	 		 (SELECT guestNo, count(*) concerts
+	  		  FROM guests 
+	  		  GROUP BY guestNo) c, genres g, indies i
+		WHERE l.connectNo(+) = i.no
+		AND a.indieNo(+) = i.no
+		AND c.guestNo(+) = i.no
+		AND g.no = i.repGenre
+		AND i.no = (SELECT connectNo
+	   	    		FROM express
+					WHERE userNo=#{userNo}
+					AND contentType = 3
+		    		AND typeNo = 16)
+	</select>
+</mapper>

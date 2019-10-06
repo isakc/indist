@@ -1,0 +1,345 @@
+
+/*header, footer*/
+body{
+    margin :0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#header{
+    width:100%;
+    height:70px;
+    position: fixed; /* 170607_1532_추가_심온 */
+    z-index: 100; /* 170607_1532_추가_심온 */
+    background-color:#99cccc;
+}
+#headerBox{
+    width:1000px;
+    height:70px;
+    background-color:#99cccc;
+    margin:auto;
+    position:relative;
+}
+#headerLogo{
+    background-image:url("../../img/Logo/headerLogo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:140px;
+    height:60px;
+    position: absolute;
+    left:-23px;
+    top:10px;
+}
+#menuTabBox{
+    width:560px;
+    height:60px;
+    position: absolute;
+    left: 205px;
+    top:5px;
+    text-align: center;
+}
+.menu{
+    width:140px;
+    height:60px;
+    line-height: 60px;
+    float: left;
+    cursor: pointer;
+}
+.menu a{
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+}
+.menu a:hover{
+    color:#0099cc;
+}
+#player{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width:50px;
+    height:64px;
+    background-image:url("../../img/Logo/player.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 80px;
+    top:2px;
+    transition: .3s ease;
+
+}
+#player:hover {
+    transform: rotate(20deg);
+}
+#profileBox{
+    width:75px;
+    height:64px;
+    position: absolute;
+    right:0px;
+    top:3px;
+}
+#profile{
+    width:64px;
+    height:64px;
+    border-radius: 32px;
+    background-color: yellow;
+    position: relative;
+}
+#profile img{
+    width:64px;
+    height:64px;
+    border-radius: 32px;
+}
+#profile:hover .click{
+    display: block;
+}
+#profile .click{
+    width:64px;
+    height:64px;
+    border-radius: 32px;
+    background-color: rgba(255, 192, 203, .3);
+    color:white;
+    position: absolute;
+    top:0px;
+    left:0px;
+    text-align: center;
+    line-height: 64px;
+    display: none;
+    cursor: pointer;
+}
+#profileBox .myAlertBox{
+    width: 98px;
+    height: 149px;
+    border: 1px dotted #424242;
+    border-radius: 10px;
+    position: relative;
+    bottom:0;
+    right:17px;
+    background-color: white;
+    display: none;
+}
+#profileBox .myAlertBox.on{
+    display: block;
+}
+#profileBox .myAlert{
+    width: 98px;
+    height:49px;
+    text-align: center;
+    line-height: 50px;
+}
+#profileBox .myAlert a{
+    color:#0099cc;
+
+}
+#profileBox .myAlert:hover{
+    background-color: #99cccc;
+    cursor: pointer;
+}
+#profileBox .myAlert:hover a{
+    background-color: #99cccc;
+    color:white;
+}
+.myInfo{
+    border-radius: 10px 10px 0 0 ;
+}
+.myBand{
+    border-top:1px dotted #424242;
+    border-bottom: 1px dotted #424242;
+}
+.logout{
+    border-radius: 0 0 10px 10px;
+}
+#profileBox .myAlert a{
+    text-decoration: none;
+}
+#alert{
+    width: 26px;
+    height: 26px;
+    background-image:url("../../img/alert/alert.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border:none;
+    position: absolute;
+    right: 0px;
+    top:35px;
+    cursor: pointer;
+    outline: none;
+    transition: .3s ease;
+    transform-origin: 30% 0%;
+
+}
+#alert:hover {
+    transform: rotate(30deg);
+}
+.alertBox{
+    width:199px;
+    height: 199px;
+    border:1px solid #424242;
+    background-color: red;
+    position: absolute;
+    right:0;
+    top:64px;
+    display: none;
+}
+.alertBox.show{
+    display: block;
+}
+#footer {
+    width:100%;
+    height:90px;
+    background:#99cccc;
+    line-height: 90px;
+}
+#topBtn{
+    width: 60px;
+    height: 60px;
+    background-color: #99cccc;
+    text-decoration: none;
+    text-align: center;
+    color:white;
+    line-height: 60px;
+    display: block;
+    position: fixed;
+    right:8%;
+}
+#footerBox{
+    width: 1000px;
+    height: 90px;
+    margin: auto;
+    line-height: 90px;
+    position: relative;
+}
+#policy{
+    font-weight: bold;
+    width:300px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right:105px;
+    top:20px;
+}
+#policy ul {
+    text-align: right;
+}
+
+#policy li {
+    display: inline;
+    border-left:1px solid #ddd;
+    margin-right:9px;
+    padding-left: 8px;
+}
+#policy li:first-child {
+    border:none;
+}
+#policy a{
+    color:white;
+    text-decoration: none;
+}
+#policy a:hover {
+    color:#0099cc;
+}
+#address{
+    font-weight: bold;
+    width:375px;
+    height:30px;
+    line-height: 30px;
+    position: absolute;
+    right: 105px;
+    bottom: 10px;
+    color:#5D4037;
+}
+#footerLogo{
+    background-image:url("../../img/Logo/footerLogo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 3px; /* 170612_1629_수정_심온_center_0 3px */
+    width:160px;
+    height:80px; /* 170612_1629_수정_심온_100px_80px */
+    position: absolute;
+    right:-50px;
+    top:10px;
+}
+
+#content {
+    position: relative; /* 170607_1532_추가_심온 */ /* 170608_1552_수정_심온_position:absolute_position:relative */
+    width: 100%;
+    min-height: 500px;
+    padding-top: 70px; /* 170609_1639_추가_심온 */
+}
+
+.alertBox{
+            width:299px;
+            height: 301px;
+            border:1px solid #616161;
+            background-color: white;
+            position: absolute;
+            right:0;
+            top:64px;
+            display: none;
+            z-index: 9999;
+        }
+        .alertBox ul{
+            width: 29px;
+        }
+        .alertBox li{
+            list-style: none;
+            width: 299px;
+            height:99px;
+            position: relative;
+        }
+        .alertBox li:nth-child(2){
+            border-bottom: 1px solid #616161;
+            border-top: 1px solid #616161;
+        }
+
+        .alertName{
+            position: absolute;
+            top:20px;
+            left: 85px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .alertTime{
+            font-size: 12px;
+            position: absolute;
+            bottom:19px;
+            left: 85px;
+            color:slategray;
+        }
+        .alertImg{
+            width: 60px;
+            height:60px;
+            border-radius: 60px;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+        .alertText{
+            position: absolute;
+            top: 43px;
+            left:85px ;
+            font-size: 15px;
+        }
+        .oneProfile{
+            background-image: url("../../img/alert/pio.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        .twoProfile{
+            background-image: url("../../img/alert/jungbong.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .threeProfile{
+            background-image: url("../../img/alert/loco.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .alertBox.show{
+            display: block;
+        }

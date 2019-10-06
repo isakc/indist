@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org/DTD/Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="rookies">
+	<select id="selectRookiesLike" parameterType="int" resultType="Rookie">
+		SELECT r.no, r.profile, r.name, r.subtitle, r.coverimg, r.pagenotice, r.typeno, r.repgenre, 
+	   	r.regdate, NVL(likes,0) likes, NVL(music,0) music, NVL(video,0) video, gn.name genre
+		FROM (SELECT connectNo, count(*) likes
+ 	  		  FROM express 
+ 	  		  WHERE contentType = 2
+ 	  		  AND typeNo = 16
+ 	  		  AND userNo = #{userNo}
+ 	  		  GROUP BY connectNo) l,
+	 		 (SELECT rookieNo, count(*) music
+ 	  		  FROM rookieContents
+ 	  		  WHERE typeNo = 6
+ 	  		  GROUP BY rookieNo) m,
+	 		 (SELECT rookieNo, count(*) video
+	  		  FROM rookieContents
+	  		  WHERE typeNo = 7 
+ 	  		  GROUP BY rookieNo) v, rookies r, genres gn
+		WHERE l.connectno = r.no
+		AND m.rookieno(+) = r.no
+		AND v.rookieno(+) = r.no
+		AND gn.no = r.no
+	</select>
+	
+	<select id="selectMyBand" parameterType="int" resultType="Rookie">
+		SELECT r.no, r.profile, r.name, r.subtitle, r.coverimg, r.pagenotice, r.typeno, r.repgenre,
+	    r.regdate, NVL(music,0) music, NVL(video,0) video, NVL(likes,0) likes, g.name genre
+		FROM (SELECT bandNo
+	   		  FROM connection
+	   		  WHERE typeNo = 1
+	   		  AND memNo = #{userNo}) c,
+	  		 (SELECT rookieNo, count(*) music
+	   		  FROM rookieContents
+ 	   		  WHERE typeNo = 6
+	   		  GROUP BY rookieNo) m,
+	  		 (SELECT rookieNo, count(*) video
+	   		  FROM rookieContents
+ 	   		  WHERE typeNo = 7
+	   		  GROUP BY rookieNo) v,
+	   		  (SELECT connectNo, count(*) likes
+	   		   FROM express
+	   		   WHERE contentType = 2
+	   		   GROUP BY connectNo) l, genres g, rookies r
+		WHERE r.no = c.bandNo
+		AND g.no = r.no
+		AND m.rookieNo(+) = r.no
+		AND v.rookieNo(+) = r.no
+	    AND l.connectNo(+) = r.no
+	</select>
+	
+	<select id="selectRookieByQuery" parameterType="String" resultType="Rookie">
+		SELECT r.no, r.profile, r.name, r.subtitle, r.coverimg, r.pagenotice, r.typeno, r.repgenre, 
+	   		   r.regdate, NVL(music,0) music, NVL(video,0) video, NVL(likes,0) likes, g.name genre
+		FROM (SELECT no, profile, name, subtitle, coverimg, pagenotice, typeno, repgenre, regdate
+	  		  FROM rookies
+	  		  WHERE name LIKE #{name}) s,
+	 		 (SELECT rookieNo, count(*) music
+	  		  FROM rookieContents
+	  		  WHERE typeNo = 6
+	  		  GROUP BY rookieNo) m,
+	 		  (SELECT rookieNo, count(*) video
+	  		  FROM rookieContents
+	  		  WHERE typeNo = 7
+	 		  GROUP BY rookieNo) v,
+	 		 (SELECT connectNo, count(*) likes
+	 		  FROM express
+	  		  WHERE contentType = 2
+	  		  AND typeNo= 16
+	  		  GROUP BY connectNo) l, rookies r, genres g
+		WHERE g.no = r.no
+		AND r.no = s.no
+		AND v.rookieNo(+) = r.no
+		AND m.rookieNo(+) = r.no
+		AND l.connectNo(+) = r.no
+	</select>
+	
+	<select id="selectMyBandMember" parameterType="int" resultType="Rookie">
+		SELECT r.no, r.profile, r.name, r.subtitle, r.coverimg, r.pagenotice, r.typeno, r.repgenre, r.regdate, 
+			   join, NVL(music,0) music, NVL(video,0) video, NVL(likes,0) likes, g.name genre
+		FROM (SELECT memNo, join
+			  FROM connection
+			  WHERE bandNo = #{bandNo}
+			  AND typeNo = 2) c,
+			 (SELECT rookieNo, count(*) music
+	  	      FROM rookieContents
+	  		  WHERE typeNo = 6
+	  	   	  GROUP BY rookieNo) m,
+	  		 (SELECT rookieNo, count(*) video
+	   		  FROM rookieContents
+	   		  WHERE typeNo = 7
+	   		  GROUP BY rookieNo) v,
+	  		 (SELECT connectNo, count(*) likes
+	   	 	  FROM express
+	   		  WHERE contentType = 2
+	   		  AND typeNo= 16
+	   		  GROUP BY connectNo) l, rookies r, genres g
+		WHERE r.no in (c.memNo)
+		AND g.no = r.repGenre
+		AND v.rookieNo(+) = r.no
+		AND m.rookieNo(+) = r.no
+		AND l.connectNo(+) = r.no
+	</select>
+</mapper>

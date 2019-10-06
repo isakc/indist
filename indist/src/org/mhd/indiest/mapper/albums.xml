@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org/DTD/Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="albums">
+	<select id="selectLikeAlbums" parameterType="int" resultType="Album">
+		SELECT a.no, a.albumtitle, a.releasedate, a.lable, a.price, a.explain, a.coverimg, a.count, 
+	   		   a.url, a.discount, a.indieno, a.genreno, a.regdate, NVL(likes,0) likes, i.name indieName
+		FROM albums a,
+	 		(SELECT connectNo, count(*) likes
+	  		 FROM express
+	  		 WHERE typeNo=16
+	  		 AND contentType = 15
+	  		 GROUP BY connectNo) l, indies i
+		WHERE i.no = a.no
+		AND l.connectNo(+) = a.no
+		AND a.no = (SELECT connectNo
+					FROM express
+					WHERE typeNo = 16
+					AND contentType = 15
+					AND userNo = #{userNo}
+					GROUP BY connectNo)
+	</select>
+</mapper>

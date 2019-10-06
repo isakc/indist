@@ -1,0 +1,38 @@
+@charset "UTF-8";
+body {
+/*
+    170607_1206_수정_심온
+    margin: 0  (삭제)
+    font-family  (추가)
+ */
+font-family: 'Noto Sans KR', sans-serif;
+width: 100%; /* 170608_1552_추가_심온 */
+    color: #424242;
+    overflow: visible;
+}
+#wrap {
+    position: relative;
+    width: 100%;
+}
+
+#contentAux {
+    position: relative;
+    width: 1000px;
+    min-height: 550px;
+    margin: auto;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#contentAux .btn_more {
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+    font-weight: normal;
+    cursor: pointer;
+}
+#contentAux .btn_more:hover {text-decoration: underline}

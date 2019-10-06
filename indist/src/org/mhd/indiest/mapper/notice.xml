@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org/DTD/Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="notice">
+	<insert id="addMember" parameterType="int">
+		INSERT INTO notice VALUES(notice_seq.nextval, '밴드멤버로 초대되었습니다.', 'F', 
+		(SELECT no
+		 FROM users
+		 WHERE no in ( 
+					SELECT memNo
+					FROM connection
+					WHERE bandNo = #{bandNo}
+					AND typeNo = 1)), 1, sysTimestamp)
+	</insert>
+</mapper>

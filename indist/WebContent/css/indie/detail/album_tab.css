@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+#indieAlbum ul {
+    position: relative;
+    overflow: hidden;
+}
+#indieAlbum li {
+    position: relative;
+    width: 176px;
+    height: 230px;
+    padding: 6px;
+    margin: 0 5px;
+    float: left;
+}
+#indieAlbum li:hover .content_album_musician, #indieAlbum li:hover .content_album_title {
+    background: #0099cc;
+    color: #ffffff;
+}
+#indieAlbum li:hover .cover {
+    background: rgba(255,255,255,.5);
+    border: 10px solid #0099cc;
+}
+#indieAlbum li:hover .content_album_price, #indieAlbum li:hover .content_album_thumb {
+    color: #424242;
+}
+#indieAlbum .content_album_cover {
+    position: relative;
+    left: 4px;
+    width: 178px;
+    height: 178px;
+}
+#indieAlbum .content_album_cover img {
+    width: 178px;
+    width: 178px;
+}
+#indieAlbum .content_album_regdate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: #99cccc;
+    width: 60px;
+    height: 60px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+    line-height: 28px;
+    opacity: .9;
+}
+#indieAlbum .content_album_info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: transparent;
+    width: 178px;
+    height: 50px;
+    line-height: 25px;
+}
+#indieAlbum .content_album_info span {
+    display: inline-block;
+    width: 178px;
+    height: 25px;
+}
+#indieAlbum .content_album_musician {
+    color: #0099cc;
+    transition: .5s ease;
+}
+#indieAlbum .content_album_title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease;
+}
+#indieAlbum .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 174px;
+    height: 218px;
+    border: 10px solid transparent;
+    transition: .5s ease;
+}
+#indieAlbum .cover a {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    display: block;
+    width: 198px;
+    height: 238px;
+    text-decoration: none;
+}
+#indieAlbum .content_album_price {
+    position: relative;
+    top: 140px;
+    color: transparent;
+    text-shadow: 0 0 50px #eeeeee;
+    font-size: 25px;
+    font-weight: bold;
+    transition: .5s ease;
+}
+#indieAlbum .content_album_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 62px;
+    color: transparent;
+    transition: .5s ease;
+}
+#indieAlbum .content_album_thumb span {
+    display: block;
+    padding: 5px;
+    font-size: 20px;
+    text-align: right;
+}
+#indieAlbum .content_album_thumb i {
+    cursor: pointer;
+}

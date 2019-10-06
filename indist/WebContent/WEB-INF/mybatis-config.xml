@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC 
+"-//mybatis.org/DTD/Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+	
+	<typeAliases>
+		<package name="org.mhd.indiest.vo"/>
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="org/mhd/indiest/mapper/address.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/albums.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/board.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/cart.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/concerts.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/connection.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/dangnagui.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/detailcon.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/express.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/genres.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/goods.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/guests.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/indiecontents.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/indies.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/notice.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/pay.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/playlist.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/replies.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/rookiecontents.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/rookies.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/songs.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/ticketing.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/ticketlink.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/type.xml"/>
+		<mapper resource="org/mhd/indiest/mapper/users.xml"/>
+	</mappers>
+	
+</configuration>

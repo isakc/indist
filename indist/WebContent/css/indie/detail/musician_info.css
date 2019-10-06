@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+#musicianInfo {
+    background-size: cover;
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+}
+
+#musicianInfo .musician_cover {
+    position: relative;
+    display: block;
+    width: 1000px;
+    height: 300px;
+}
+#musicianInfo .musician_cover img {
+    position: absolute;
+    width: 1000px;
+}
+
+#musicianProfile {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    width: 500px;
+    height: 116px;
+}
+#musicianProfile .profile {
+    position: absolute;
+    float: left;
+    width: 116px;
+    height: 116px;
+}
+#musicianProfile .profile img {
+    width: 116px;
+    border-radius: 58px;
+}
+#musicianProfile .musician_name, #musicianProfile .sub_title {
+    position: absolute;
+    left: 140px;
+    text-shadow: 0 0 5px #424242;
+}
+#musicianProfile .musician_name {
+    min-width: 50px;
+    top: 40px;
+    font-size: 25px;
+    color: #eeeeee;
+}
+#musicianProfile .sub_title {
+    top: 75px;
+    max-width: 500px;
+    font-size: 15px;
+    color: #eeeeee;
+}
+
+#musicianInfo .btn_fan {
+    background: #eeeeee;
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+    min-width: 100px;
+    padding: 0 10px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+}
+#musicianInfo .btn_fan i {
+    color: #E91E63;
+    cursor: pointer;
+}
+#indieSettingBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 40px;
+    color: #424242;
+    cursor: pointer;
+}
+
+#musicianInfo .indie_setting {
+    position: absolute;
+    display: none;
+    border-radius: 100px;
+    text-align: center;
+    color: #424242;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#musicianInfo .musician_cover .indie_setting {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    top: 10px;
+    right: 10px;
+    overflow: hidden;
+}
+
+#musicianInfo .musician_cover_file {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 40px;
+    opacity: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#musicianProfile .profile .indie_setting {
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+}
+#musicianProfile .profile .musician_profile_file {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 25px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#musicianProfile .musician_name .indie_setting {
+    top: 0;
+    right: -30px;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    color: #eeeeee;
+}
+
+#musicianProfile .sub_title .indie_setting {
+    bottom: 0;
+    right: -20px;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    color: #eeeeee;
+}
+
+/* musician name & sub title update */
+#musicianProfile .musician_name_update, #musicianProfile .musician_sub_title_update {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    transition: .2s ease;
+}
+#musicianProfile .musician_name_update {
+    height: 30px;
+}
+#musicianProfile .musician_sub_title_update {
+    height: 20px;
+}
+
+#musicianName, #musicianSubTitle {
+    border: none;
+    padding: 0 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #eeeeee;
+}
+#musicianName {
+    width: 315px;
+    height: 30px;
+    font-size: 25px;
+}
+#musicianSubTitle {
+    width: 400px;
+    height: 20px;
+    font-size: 20px;
+}
+
+#musicianProfile .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    border: none;
+    box-shadow: 0 0 10px #cccccc;
+}
+#musicianProfile .musician_name_update .btn {
+    height: 30px;
+}
+#musicianProfile .musician_sub_title_update .btn {
+    height: 20px;
+}
+#musicianProfile .btn.update {
+    right: 53px;
+}

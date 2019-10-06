@@ -1,0 +1,61 @@
+/*왼쪽 사이드바 메뉴*/
+#MyPageLeftSnb{
+    margin-left: 30px;
+    width: 200px;
+    float:left;
+    padding-top: 70px;
+}
+
+#MyPageLeftSnb li{
+    line-height: 43px;
+    cursor: pointer;
+}
+
+#MyPageLeftSnb li>a{
+    display: inline-block;
+    color: #9695A6;
+    text-decoration: none;
+    border-bottom:3px solid transparent;
+}
+
+#MyPageLeftSnb li:hover>a{
+    color: #2B6396;
+    border-color: #2B6396;
+}
+
+#MyPageLeftSnb .snb_sub_list{
+    width: 180px;
+    margin-left: 20px;
+    overflow: hidden;
+    height: 0;
+    transition: .2s ease;
+}
+
+#MyPageLeftSnb>ul>li:hover>.snb_sub_list{
+    height: 91px;
+}
+
+#MyPageLeftSnb li.on > a {
+    color: #2B6396;
+    border-color: #2B6396;
+}
+
+#MyPageLeftSnb > ul > li.on > .snb_sub_list {
+    height: 91px;
+}
+/*왼쪽 사이드바 메뉴 끝*/
+
+
+#footer{
+    clear: both;
+}
+
+#content {
+    position: relative; /* 170607_1532_추가_심온 */ /* 170608_1552_수정_심온_position:absolute_position:relative */
+    width: 1000px;
+    min-height: 800px;
+    padding-top: 70px; /* 170609_1639_추가_심온 */
+    margin-bottom: 50px;
+    float: left;
+    /*background-color: #BDBDBD;*/
+}
